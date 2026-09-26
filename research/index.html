@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Joseph W Choi</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/navbar.css">
+  </head>
+  <body>
+    <div class="wrapper">
+      <nav class="topbar navbar navbar-expand-lg navbar-light bg-white">
+        <a class="navbar-brand" href="/">
+          <b>Joseph W Choi</b>
+        </a>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link active" href="/research">Research</a></li><li class="nav-item"><a class="nav-link" href="/software">Software</a></li><li class="nav-item"><a class="nav-link" href="/publications">Publications</a></li><li class="nav-item"><a class="nav-link" href="/jsphchoi.pdf">CV</a></li>
+          </ul>
+        </div>
+        <form class="nav-search" role="search">
+          <input type="search" placeholder="Search" aria-label="Search" autocomplete="off">
+          <button type="submit" aria-label="Search"><svg width="1em" height="1em" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="7" cy="7" r="4.5"/><path d="M11 11l3.5 3.5" stroke-linecap="round"/></svg></button>
+        </form>
+        <button class="navbar-toggler" type="button" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </nav>
+      <div class="main-content">
+        <div class="container">
+          <h1>Research</h1>
+<p>
+  My research develops GPU-based nonlinear programming methods for dynamic optimization, where differential-algebraic equation (DAE) constraints are discretized into large, structured nonlinear programs. I implement these methods as open-source <a href="https://julialang.org/">Julia</a> software, built on <a href="https://github.com/madsuite-org/ExaModels.jl">ExaModels.jl</a> and <a href="https://github.com/madsuite-org/MadNLP.jl">MadNLP.jl</a>. These methods are then applied to parameter estimation and optimal control problems across a variety of fields in process systems engineering.
+</p>
+
+<h2>Scalable Dynamic Optimization with GPUs</h2>
+<div class="row">
+  <div class="col-md-6">
+    <p>
+      Dynamic optimization problems can be solved with sequential methods, which integrate the DAEs with a time-stepping solver, or with simultaneous methods, which discretize the DAEs over the full horizon into a single large nonlinear program. The repetitive structure of simultaneous formulations maps naturally onto GPUs. I develop <a href="https://github.com/madsuite-org/ExaModelsCollocation.jl">ExaModelsCollocation.jl</a> to formulate these problems with orthogonal collocation, and study how GPU computing changes the trade-offs between sequential and simultaneous methods <a href="/publications#choi2027revisiting">[C1]</a>.
+    </p>
+    <p>
+      Simultaneous methods require a sufficiently fine and properly distributed discretization mesh for accurate solution profiles. However, the mesh layout must be chosen prior to solving the problem. I am developing parametric sensitivity-based adaptive mesh relocation strategies for GPU-based nonlinear solvers, which use the sensitivities to efficiently update state trajectories upon relocating mesh nodes, building on <a href="https://github.com/madsuite-org/ParametricNLPModels.jl">ParametricNLPModels.jl</a>.
+    </p>
+    <p>
+      I am also developing GPU-based batched interior-point methods for solving weakly coupled multi-scenario nonlinear programs.
+    </p>
+  </div>
+  <div class="col-md-6">
+    <figure class="figure research-figure">
+      <img class="figure-img img-fluid" src="/img/seq-vs-sim.png" alt="Orthogonal collocation versus implicit Euler">
+      <figcaption class="figure-caption">
+        Orthogonal collocation versus implicit Euler for z&prime;&nbsp;=&nbsp;(z&nbsp;&minus;&nbsp;1)<sup>2</sup>, z(0)&nbsp;=&nbsp;&minus;3.
+      </figcaption>
+    </figure>
+    <figure class="figure research-figure">
+      <img class="figure-img img-fluid" src="/img/mesh-refinement.png" alt="Mesh relocation over iterations">
+      <figcaption class="figure-caption">
+        Mesh relocation example from ExaModelsCollocation.jl.
+      </figcaption>
+    </figure>
+  </div>
+</div>
+
+<h2>Estimation and Control Applications</h2>
+<p>
+  I apply these methods to parameter estimation and optimal control problems in process systems engineering, including systems biology and energy systems. For example, <a href="https://github.com/mit-shin-group/ExaModelsPEtab.jl">ExaModelsPEtab.jl</a> formulates parameter estimation problems from systems biology as nonlinear programs that can be solved efficiently on GPUs.
+</p>
+
+        </div>
+      </div>
+      <div class="push"></div>
+    </div>
+    <footer class="footer d-flex align-items-center bg-white">
+      <div class="container">
+        <a class="footer-name" href="/"><strong>Joseph W Choi</strong></a>
+        <br>
+        <small>
+          [
+          <a href="mailto:jsphchoi@mit.edu">Email</a>
+          |
+          <a href="https://scholar.google.com/citations?user=BTau6ocAAAAJ">Google Scholar</a>
+          |
+          <a href="https://www.linkedin.com/in/jsphchoi/">LinkedIn</a>
+          |
+          <a href="https://github.com/jsphchoi">Github</a>
+          |
+          <a href="/jsphchoi.pdf">CV</a>
+          ]
+        </small>
+      </div>
+    </footer>
+
+    <script src="/js/navbar.js"></script>
+  </body>
+</html>
