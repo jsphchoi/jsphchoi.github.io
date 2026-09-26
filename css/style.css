@@ -1,0 +1,114 @@
+/* MIT brand red (brand.mit.edu) */
+:root {
+    --mit-red: #750014;
+    --heading-rule: #a2a9b1;
+    --text: #212529;
+}
+
+html { overflow-y: scroll; }
+
+html, body {
+    height: 100%;
+    margin: 0px;
+    font-size: 11pt;
+    line-height: 1.5;
+    color: var(--text);
+}
+
+a {
+    color: var(--mit-red);
+    text-decoration: none;
+}
+a:hover {
+    color: var(--mit-red);
+    text-decoration: underline;
+}
+
+h1 { font-weight: bold; font-size: 1.8em; }
+h2 { font-weight: bold; font-size: 1.5em; }
+h3 { font-weight: bold; font-size: 1.3em; }
+h4 { font-weight: bold; font-size: 1.15em; }
+
+h1, h2 {
+    border-bottom: 1px solid var(--heading-rule);
+    padding-top: 0.5em;
+    padding-bottom: 0.17em;
+    margin-bottom: 0.6em;
+}
+
+p { margin-bottom: 15px; }
+ul { padding-left: 20px; }
+
+.mit { color: var(--mit-red); }
+
+/* 948px content column, navbar inset to match */
+.container { max-width: 978px !important; }
+.wrapper .topbar.navbar {
+    padding-left: max(15px, calc((100% - 948px) / 2));
+    padding-right: max(15px, calc((100% - 948px) / 2));
+}
+@media (max-width: 999px) {
+    .container { padding-left: 8px !important; padding-right: 8px !important; }
+    .wrapper .topbar.navbar { padding-left: 8px !important; padding-right: 8px !important; }
+}
+
+.main-content {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* sticky footer */
+.wrapper {
+    min-height: 100%;
+    margin-bottom: -70px;
+}
+.footer, .push { height: 70px; }
+.footer {
+    border-top: 1px solid #ddd;
+    text-align: center;
+    width: 100%;
+}
+.footer-name,
+.footer-name:hover {
+    color: var(--text);
+    text-decoration: none;
+}
+
+/* photo + info card */
+.full {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+.left {
+    min-width: 280px;
+    max-width: 280px;
+    margin-right: 20px;
+}
+.profile-picture { width: 100%; }
+
+@media only screen and (max-width: 991px) {
+    .full { flex-direction: column; }
+    .left {
+        margin-right: 0px;
+        margin-bottom: 10px;
+    }
+    .right { width: 100%; }
+}
+
+/* research figures, centered in their column */
+.research-figure {
+    display: block;
+    width: 80%;
+    margin: 0 auto 1rem;
+}
+
+/* bibtex2html output */
+td.bibtexnumber {
+    vertical-align: top;
+    padding-right: 0.8em;
+    white-space: nowrap;
+}
+td.bibtexitem { padding-bottom: 0.6em; }

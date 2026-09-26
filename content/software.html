@@ -1,0 +1,24 @@
+<h1>Software</h1>
+<p>
+  I develop and contribute to open-source <a href="https://julialang.org/">Julia</a> packages for dynamic optimization and GPU-accelerated nonlinear programming, mostly around <a href="https://github.com/madsuite-org/ExaModels.jl">ExaModels.jl</a> and <a href="https://github.com/madsuite-org/MadNLP.jl">MadNLP.jl</a>.
+</p>
+<ul>
+  <li>
+    <strong><a href="https://github.com/madsuite-org/ExaModelsCollocation.jl">ExaModelsCollocation.jl</a></strong>: Helper functions for formulating dynamic optimization problems via orthogonal collocation in ExaModels.jl, with support for adaptive meshes and unknown time horizons. I am the main developer of the package.
+  </li>
+  <li>
+    <strong><a href="https://github.com/mit-shin-group/ExaModelsPEtab.jl">ExaModelsPEtab.jl</a></strong>: Formulates PEtab parameter estimation problems as ExaModels using orthogonal collocation, which can then be solved with MadNLP on CPUs or GPUs. I am the main developer and used it for the systems biology benchmarks in <a href="/publications#choi2027revisiting">[C1]</a>.
+  </li>
+  <li>
+    <strong><a href="https://github.com/madsuite-org/ParametricNLPModels.jl">ParametricNLPModels.jl</a> (Developer)</strong>: A data structure for computing parametric sensitivities in nonlinear programming models, built on NLPModels.jl. I wrote the parametric Jacobian and Hessian interface.
+  </li>
+  <li>
+    <strong><a href="https://github.com/madsuite-org/ExaModels.jl">ExaModels.jl</a> (Contributor)</strong>: A sparse automatic differentiation and algebraic modeling tool for nonlinear programs on CPUs and GPUs. I am adding automatic differentiation with respect to parameters, which computes the parametric constraint Jacobian and Lagrangian Hessian needed for sensitivity calculations.
+  </li>
+  <li>
+    <strong><a href="https://github.com/madsuite-org/MadNLP.jl">MadNLP.jl</a> (Contributor)</strong>: A nonlinear programming solver based on the filter line-search interior-point method, with GPU support. I am adding parametric sensitivity calculations from derivatives with respect to parameters.
+  </li>
+  <li>
+    <strong><a href="https://github.com/PSORLab/EOptInterface.jl">EOptInterface.jl</a></strong>: An abstraction layer for optimizing componentized equation-oriented models built in ModelingToolkit.jl using JuMP.jl. I was the main developer from 2024 to 2025 as an undergraduate in the PSOR Lab <a href="/publications#alston2026eoptinterface">[J1]</a>.
+  </li>
+</ul>

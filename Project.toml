@@ -1,0 +1,13 @@
+name = "ChoiIO"
+uuid = "9ede30d5-aa57-443d-b0a3-84ba1880fcd4"
+version = "0.1.0"
+authors = ["Joseph W. Choi <jsphchoi@mit.edu>"]
+
+[deps]
+JSON = "682c06a0-de6a-54ab-a142-c8b1cf79cde6"
+LiveServer = "16fef848-5104-11e9-1b77-fb7a48bbb589"
+
+[compat]
+JSON = "1.9.0"
+LiveServer = "1.6.0"
+julia = "1.9"

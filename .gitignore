@@ -1,0 +1,13 @@
+build/
+Manifest.toml
+
+# LaTeX
+*.aux
+*.bbl
+*.blg
+*.log
+*.out
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+tex/jsphchoi.pdf
