@@ -1,2 +1,3 @@
 # jsphchoi.github.io
-jsphchoi.info
+
+Joseph W. Choi's website.
