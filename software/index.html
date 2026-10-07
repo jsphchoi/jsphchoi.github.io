@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Joseph W Choi</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/navbar.css">
+  </head>
+  <body>
+    <div class="wrapper">
+      <nav class="topbar navbar navbar-expand-lg navbar-light bg-white">
+        <a class="navbar-brand" href="/">
+          <b>Joseph W Choi</b>
+        </a>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="/research">Research</a></li><li class="nav-item"><a class="nav-link active" href="/software">Software</a></li><li class="nav-item"><a class="nav-link" href="/publications">Publications</a></li><li class="nav-item"><a class="nav-link" href="/jsphchoi.pdf">CV</a></li>
+          </ul>
+        </div>
+        <form class="nav-search" role="search">
+          <input type="search" placeholder="Search" aria-label="Search" autocomplete="off">
+          <button type="submit" aria-label="Search"><svg width="1em" height="1em" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="7" cy="7" r="4.5"/><path d="M11 11l3.5 3.5" stroke-linecap="round"/></svg></button>
+        </form>
+        <button class="navbar-toggler" type="button" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </nav>
+      <div class="main-content">
+        <div class="container">
+          <h1>Software</h1>
+<p>
+  I develop and contribute to open-source <a href="https://julialang.org/">Julia</a> packages for dynamic optimization and GPU-accelerated nonlinear programming, mostly around <a href="https://github.com/madsuite-org/ExaModels.jl">ExaModels.jl</a> and <a href="https://github.com/madsuite-org/MadNLP.jl">MadNLP.jl</a>.
+</p>
+<ul>
+  <li>
+    <strong><a href="https://github.com/madsuite-org/ExaModelsCollocation.jl">ExaModelsCollocation.jl</a></strong>: Helper functions for formulating dynamic optimization problems via orthogonal collocation in ExaModels.jl, with support for adaptive meshes and unknown time horizons. I am the main developer of the package.
+  </li>
+  <li>
+    <strong><a href="https://github.com/mit-shin-group/ExaModelsPEtab.jl">ExaModelsPEtab.jl</a></strong>: Formulates PEtab parameter estimation problems as ExaModels using orthogonal collocation, which can then be solved with MadNLP on CPUs or GPUs. I am the main developer and used it for the systems biology benchmarks in <a href="/publications#choi2027revisiting">[C1]</a>.
+  </li>
+  <li>
+    <strong><a href="https://github.com/madsuite-org/ParametricNLPModels.jl">ParametricNLPModels.jl</a> (Developer)</strong>: A data structure for computing parametric sensitivities in nonlinear programming models, built on NLPModels.jl. I wrote the parametric Jacobian and Hessian interface.
+  </li>
+  <li>
+    <strong><a href="https://github.com/madsuite-org/ExaModels.jl">ExaModels.jl</a> (Contributor)</strong>: A sparse automatic differentiation and algebraic modeling tool for nonlinear programs on CPUs and GPUs. I am adding automatic differentiation with respect to parameters, which computes the parametric constraint Jacobian and Lagrangian Hessian needed for sensitivity calculations.
+  </li>
+  <li>
+    <strong><a href="https://github.com/madsuite-org/MadNLP.jl">MadNLP.jl</a> (Contributor)</strong>: A nonlinear programming solver based on the filter line-search interior-point method, with GPU support. I am adding parametric sensitivity calculations from derivatives with respect to parameters.
+  </li>
+  <li>
+    <strong><a href="https://github.com/PSORLab/EOptInterface.jl">EOptInterface.jl</a></strong>: An abstraction layer for optimizing componentized equation-oriented models built in ModelingToolkit.jl using JuMP.jl. I was the main developer from 2024 to 2025 as an undergraduate in the PSOR Lab <a href="/publications#alston2026eoptinterface">[J1]</a>.
+  </li>
+</ul>
+
+        </div>
+      </div>
+      <div class="push"></div>
+    </div>
+    <footer class="footer d-flex align-items-center bg-white">
+      <div class="container">
+        <a class="footer-name" href="/"><strong>Joseph W Choi</strong></a>
+        <br>
+        <small>
+          [
+          <a href="mailto:jsphchoi@mit.edu">Email</a>
+          |
+          <a href="https://scholar.google.com/citations?user=BTau6ocAAAAJ">Google Scholar</a>
+          |
+          <a href="https://www.linkedin.com/in/jsphchoi/">LinkedIn</a>
+          |
+          <a href="https://github.com/jsphchoi">Github</a>
+          |
+          <a href="/jsphchoi.pdf">CV</a>
+          ]
+        </small>
+      </div>
+    </footer>
+
+    <script src="/js/navbar.js"></script>
+  </body>
+</html>
